@@ -13,7 +13,8 @@ The project uses 5 tables:
 - **users** — Customer demographics
 
 ## ❓ Questions Answered
-- Q1: Top 10 restaurants by total sales amount
+- Q1: Top 10 restaurants by total sales amount<img width="540" height="360" alt="360_F_601171862_l7yZ0wujj8o2SowiKTUsfLEEx8KunYNd" src="https://github.com/user-attachments/assets/fbc32354-f3cf-4f3b-adc7-b9e03151ac42" />
+
 - Q2: Average rating and total rating count for top 20 cities
 - Q3: Monthly order trends based on order volume
 - Q4: Top 5 most popular cuisines by order volume
