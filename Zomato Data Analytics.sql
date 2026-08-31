@@ -62,20 +62,18 @@ GROUP BY city_name
 ORDER BY restaurant_count DESC
 LIMIT 20;
 
--- Q7 How do different user demographics correlate with average order value?
-
--- Q8 Who are the top 15 highest-spending users?
+-- Q7 Who are the top 15 highest-spending users?
 SELECT u.user_id, u.name, SUM(d.sales_amount) as user_spending FROM users u
 JOIN 
 dataset_table d on d.user_id = u.user_id
 GROUP BY u.user_id, u.name ORDER BY user_spending DESC
 LIMIT 15;
 
--- Q9 What are the top 15 cuisines with the highest average menu prices?
+-- Q8 What are the top 15 cuisines with the highest average menu prices?
 SELECT cuisine, AVG(price) as avg_price FROM menu 
 GROUP BY cuisine ORDER BY avg_price DESC LIMIT 15;
 
--- Q10 Which restaurants offer the most diverse menu, based on the number of unique cuisines and dishes available?
+-- Q9 Which restaurants offer the most diverse menu, based on the number of unique cuisines and dishes available?
 SELECT 
     c.name,
     COUNT(DISTINCT m.cuisine) AS no_of_cuisines,
@@ -87,7 +85,7 @@ GROUP BY c.name
 ORDER BY no_of_cuisines DESC, no_of_dishes DESC
 LIMIT 20;
 
--- Q11 What are the most ordered food items across all restaurants?
+-- Q10 What are the most ordered food items across all restaurants?
 SELECT item, SUM(sales_qty) AS total_ordered FROM dataset_table d
 JOIN
 menu m on m.r_id = d.r_id
@@ -95,13 +93,13 @@ JOIN
 food_items f on f.f_id = m.f_id
 GROUP BY item ORDER BY total_ordered DESC;
 
--- Q12 How does spending behavior differ between genders?
+-- Q11 How does spending behavior differ between genders?
 SELECT gender, SUM(sales_amount) AS total_spending FROM users u
 JOIN
 dataset_table d on d.user_id = u.user_id
 GROUP BY gender;
 
--- Q13 On which days of the week do restaurants experience peak order volumes?
+-- Q12 On which days of the week do restaurants experience peak order volumes?
 SELECT 
     DAYNAME(order_date) AS day_of_week,
     COUNT(*) AS order_volume,
@@ -110,7 +108,7 @@ FROM dataset_table
 GROUP BY DAYNAME(order_date)
 ORDER BY order_volume DESC;
 
--- Q14 How does order frequency vary across different income groups?
+-- Q13 How does order frequency vary across different income groups?
 SELECT 
     u.`Monthly Income` AS income_group,
     COUNT(d.user_id) AS order_frequency
