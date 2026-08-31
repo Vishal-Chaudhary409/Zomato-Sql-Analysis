@@ -19,13 +19,13 @@ The project uses 5 tables:
 - Q4: Top 5 most popular cuisines by order volume
 - Q5: Distribution of vegetarian vs non-vegetarian items ordered
 - Q6: Top 20 cities by number of restaurants
-- Q8: Top 15 highest-spending users
-- Q9: Top 15 cuisines with highest average menu prices
-- Q10: Restaurants with most diverse menu
-- Q11: Most ordered food items across all restaurants
-- Q12: Spending behavior difference between genders
-- Q13: Peak order days of the week
-- Q14: Order frequency across different income groups
+- Q7: Top 15 highest-spending users
+- Q8: Top 15 cuisines with highest average menu prices
+- Q9: Restaurants with most diverse menu
+- Q10: Most ordered food items across all restaurants
+- Q11: Spending behavior difference between genders
+- Q12: Peak order days of the week
+- Q13: Order frequency across different income groups
 
 ## 🛠️ Tools Used
 - MySQL Workbench
